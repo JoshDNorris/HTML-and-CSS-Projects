@@ -1,0 +1,94 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.img_text {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img {
+    -webkit-filter: sepia(50%);
+    filter: sepia(50%);
+    border-radius: 50px;
+}
+footer {
+    text-align: center;
+    font-weight: bold;    
+}
+.italics {
+    font-style: italic;    
+}
+table, th, td {
+    border: 1px solid blue;
+}
+th, td {
+    padding: 30px;
+}
+th {
+    background-color: skyblue;
+}
+.navbar {
+    overflow: hidden;
+    background-color: blue;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background: darkblue;
+    color: yellow;
+}
+.main {
+    margin-top: 100px;
+}
+.column {
+    height: 50px;
+    width: 100%;
+    background-color: darkcyan;
+    color: lightgreen;
+    float: left;
+    width: 50%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.hover_purp:hover {
+    color: purple;   
+}
+.hover_red:hover {
+    color: red;   
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left: 376px;
+    right: 0;
+    height: 50%;
+    width: 50%;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+.container:hover .overlay {
+    opacity: 1;
+}
