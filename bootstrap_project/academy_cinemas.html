@@ -32,6 +32,13 @@
                       </form>
                 </div>
             </nav>
+            <!--Alert-->
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Sign up to our movie deal club!</strong> Sign in below for great deals, monthly!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
             <!--Jumbotron-->
             <div class="jumbotron jumbotron-fluid bg-info text-center">
                 <div class="container">
@@ -137,18 +144,63 @@
                         </div>
                 </div>
             </div>
-            
-            
             <!--/Showtimes-->
+            <!--jumbotron heading-->
+            <div class='jumbotron jumbotron-fluid bg-info mt-5 text-center'>
+                <div class='container'>
+                    <h1 class='display-4 hidden-sm-down' style='color:#fff;font-family:roboto;font-weight:900;text-transform:uppercase;'>Movie Deals</h1>
+                    <p class='lead'>Check out our monthly deals...</p>
+                    <!--movie deals-->
+                    <button type="button" data-toggle="modal" data-target="#register" class='btn btn-outline-primary'>See our monthly movie deals</button>
+                </div>
+            </div>
+
 
             <!--Form-->
             <form class="text-center" id="deals">
-                <h1 class="text-primary my-5">Sign up for Movie Clube Rewards!</h1>
+                <h1 class="text-primary my-5">Sign up for Movie Club Rewards!</h1>
                 <div class="form-group">
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" data-toggle="modal" data-target="#register">Register for club rewards</button>
             </form>
+            
+                
+            <!-- Modal -->
+            <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Monthly rewards</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEmail4">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputPassword4">Name</label>
+                                        <input type="text" class="form-control" id="inputName" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                </div>
+                            </form>
+                         </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!--Footer Nav-->
             <div class="container my-5">
                 <ul class="nav nav-inline">
@@ -176,5 +228,11 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <script>
+        $('.popover-dismiss').popover({
+            trigger: 'focus'
+        })
+    </script>
   </body>
 </html>
